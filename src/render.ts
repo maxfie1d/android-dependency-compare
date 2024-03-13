@@ -2,7 +2,7 @@ import { CompareResult } from "./compare.ts";
 
 export function renderResultAsCsv(result: CompareResult): string {
   const table: MarkdownTable = {
-    header: ["", ...result.repos.map((x) => x.name)],
+    header: ["Dependency", ...result.repos.map((x) => x.name)],
     rows: result.dependencies.map((dependency) => {
       return {
         dependency: dependency.name,
